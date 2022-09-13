@@ -48,10 +48,10 @@ public class Account {
         if(this.equals(anotherAccount)) {
             throw new IllegalArgumentException("Cannot transfer money to self.");
         }
-        if(transferAmount <= 0) {
+        else if(transferAmount <= 0) {
             throw new IllegalArgumentException("Transfer amount must be greater than 0.");
         }
-        if(this.balance < transferAmount) {
+        else if(this.balance < transferAmount) {
             throw new IllegalArgumentException("Insufficient Funds.");
         }
         this.withdraw(transferAmount);
